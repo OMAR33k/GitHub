@@ -1,0 +1,69 @@
+.contactContainer {
+  background-color: var(--third-color);
+  color: var(--text-color);
+  padding: 50px 20px;
+  min-height: 100vh;
+  margin-bottom: -23px;
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.contactTitle::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 20px auto;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contactItem:hover {
+  transform: translateX(10px);
+}
+
+.input {
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.input:focus {
+  border-color: var(--secondary-color) !important;
+  box-shadow: 0 0 8px var(--hover-color);
+}
+
+.submit {
+  transition: all 0.3s ease;
+  background-color: var(--primary-color) !important;
+  border: NONE;
+  outline: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color) !important;
+}
+
+.submit:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--third-color) !important;
+  border: 1px solid var(--secondary-color);
+}

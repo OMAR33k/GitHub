@@ -1,0 +1,78 @@
+/* القواعد الأساسية للـ Sidebar (للطبقات الكبيرة) */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #3b5998, #2c3e50);
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* عنوان الـ Sidebar */
+.sidebarHeader {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* روابط القائمة */
+.navLink {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 12px 20px !important;
+  margin: 8px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff !important;       
+  text-decoration: none;
+}
+
+.icon {
+  margin-left: 10px;
+  margin-right: 4px;
+  font-size: 1.3rem;
+}
+
+/* عند الشاشات الصغيرة: تحويل الـ Sidebar إلى شريط رأس (Header) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 60px;              /* ارتفاع صغير مثل الـ header */
+    padding: 0 20px;           /* تقليل الحشوة الرأسية */
+    min-height: auto;
+    display: flex;
+    flex-direction: row;       /* عناصر في صف أفقي */
+    align-items: center ;       /* محاذاة عمودية في المنتصف */
+    justify-content: space-between; /* توزيع الفراغ بين العنوان وروابط التنقل */
+  }
+  
+  /* تنسيق عنوان الـ Sidebar ليكون جزءًا من شريط الرأس */
+  .sidebarHeader {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  
+  /* وضع روابط التنقل في صف أفقي */
+  .navLink {
+    padding: 5px 10px !important;
+    margin: 0 5px;
+    /* يمكن تقليل حجم الخط إن رغبت */
+    font-size: 0.9rem;
+    display: flex;
+  }
+  
+  /* إذا كنت تستخدم فئة bootstrap "flex-column" لتوزيع العناصر عموديًا،
+     تأكد من إعادة ضبطها لتكون أفقية */
+  .flex-column {
+    flex-direction: row !important;
+    align-items: center;
+  }
+}

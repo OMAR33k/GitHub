@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #ffd60a;
+  --third-color: #1c3656;
+  --hover-color: #ffe28a;
+  --text-color: white;
+  --font-family: Arial, sans-serif;
+  --facebook-color: #2e2efe;
+  --twittar-color: #00bbff;
+  --instagram-color: #f41f9b;
+  --linkedin-color: #262071;
+  --logo-color: #f6fe00;
+}
+.aboutContainer {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-family);
+}
+.aboutContent {
+  background-color: var(--third-color);
+  padding: 100px 15px;
+  margin-top: 30px;
+}
+.sectionText {
+  padding: 20px;
+}
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 10px auto;
+}
+.sectionDesc {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  text-align: justify;
+}
+.aboutImage {
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  transition: transform 0.8s ease-in-out;
+}
+.aboutImage:hover {
+  transform: scale(1.05);
+}
+.featuresSection {
+  padding: 50px 15px;
+  padding-bottom: 200px;
+  background-color: var(--section-color);
+  color: var(--text-color);
+  position: relative;
+  overflow: visible;
+}
+.featureBox {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.featureBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-color: var(--secondary-color);
+}
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+.featureTitle {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.featureDesc {
+  font-size: 1rem;
+}
+.teamSection {
+  padding: 60px 15px;
+  padding-bottom: 200px;
+  background-color:var(--third-color);
+  color: #333;
+  position: relative;
+  overflow: visible;
+}
+.teamCard {
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+.teamCard:hover {
+  transform: translateY(-5px);
+}
+.teamImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.teamName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color) !important;
+}
+.teamRole {
+  font-size: 1rem;
+  color: var(--text-color) !important;
+}
+
+.WavesContainer {
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow:visible;
+  position: absolute;
+  top: -120px; 
+  height: 160px; 
+  background-color: var(--section-color);
+}
+.Waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transform: rotate(180deg);
+}
+.WavesContainerTo {
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow:visible;
+  position: absolute;
+  top: -120px; 
+  height: 160px; 
+  background-color: transparent;
+}
+.WavesTo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .sectionDesc {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .aboutContent,
+  .featuresSection,
+  .teamSection {
+    padding: 50px 15px;
+  }
+}

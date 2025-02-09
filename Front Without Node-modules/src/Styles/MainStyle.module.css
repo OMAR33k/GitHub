@@ -1,0 +1,42 @@
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #ffd60a;
+  --third-color: #1c3656;
+  --hover-color: #ffe28a;
+  --text-color: white;
+  --section-color: #2f4968;
+  --scroll-color: #2f4054;
+  --font-family: Arial, sans-serif;
+  --facebook-color: #2e2efe;
+  --twittar-color: #00bbff;
+  --instagram-color: #f41f9b;
+  --linkedin-color: #262071;
+  --logo-color: #f6fe00;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.mainContent {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+::-webkit-scrollbar {
+  width: 10px; 
+}
+::-webkit-scrollbar-track {
+  background: var(--scroll-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#015988 ;
+}

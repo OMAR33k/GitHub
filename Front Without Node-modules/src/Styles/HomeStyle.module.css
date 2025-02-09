@@ -1,0 +1,152 @@
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #ffd60a;
+  --third-color: #1c3656;
+  --hover-color: #ffe28a;
+  --text-color: white;
+  --section-color: #2f4968;
+  --font-family: Arial, sans-serif;
+  --facebook-color: #2e2efe;
+  --twittar-color: #00bbff;
+  --instagram-color: #f41f9b;
+  --linkedin-color: #262071;
+  --logo-color: #f6fe00;
+}
+.mainWrapper {
+  font-family: var(--font-family);
+  padding-top: 76px;
+  margin-top: -20px;
+}
+.heroSection {
+  background-color: var(--third-color);
+  color: var(--text-color);
+  padding: 8rem 0;
+  position: relative;
+  text-align: center;
+}
+.sectionTitle{
+  color: var(--secondary-color);
+}
+.sectionTitle::after{
+    content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 20px auto;
+}
+.heroText h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.ctaButton {
+  width: 140px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: var(--primary-color) !important;
+  border: NONE;
+  outline: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color) !important;
+}
+.ctaButton:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--third-color) !important;
+  border: 1px solid var(--secondary-color);
+}
+.featuresSection {
+  padding: 5rem 0;
+  padding-bottom: 200px;
+  background-color: var(--section-color);
+  overflow: visible;
+  position: relative;
+}
+.featureCard {
+  border: none !important;
+  background-color:  rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: var(--text-color) !important;
+  height: 100%;
+}
+.iconWrapper {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.coursesSection {
+  padding: 5rem 0;
+  padding-bottom: 200px;
+  background-color: var(--third-color);
+  color: var(--text-color);
+  margin-bottom: -25px;
+  position: relative;
+  overflow: visible;
+}
+.courseCard {
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-color) !important;
+  transition: all 0.3s ease;
+}
+.communitySection {
+  padding: 6rem 0;
+  background-color: var(--section-color);
+  color: var(--text-color);
+  text-align: center;
+  position: relative;
+}
+.communityImage {
+  max-width: 100%;
+  width: 400px;
+  border-radius: 10px;
+}
+.communityText p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.WavesContainer {
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow:visible;
+  position: absolute;
+  top: -120px; 
+  height: 160px; 
+  background-color: var(--section-color);
+}
+.Waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transform: rotate(180deg);
+}
+.WavesContainerTo {
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow:visible;
+  position: absolute;
+  top: -120px; 
+  height: 160px; 
+  background-color: transparent;
+}
+.WavesTo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.textShadow{
+  text-shadow: 0 12px 20px var(--secondary-color);
+}
+@media (max-width: 768px) {
+  .heroText h1 {
+    font-size: 2.5rem;
+  }
+  .heroText p {
+    font-size: 1rem;
+  }
+}

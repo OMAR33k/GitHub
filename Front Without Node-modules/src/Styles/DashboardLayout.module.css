@@ -1,0 +1,22 @@
+/* src/Styles/DashboardLayout.module.css */
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #eef2f7; /* لون الخلفية كما تريد */
+}
+
+.dashboardContent {
+  flex: 1;
+  padding: 30px 20px;
+  /* في الشاشات الصغيرة يمكن تقليل البادينج إذا لزم الأمر */
+}
+
+@media (max-width: 768px) {
+  .dashboardLayout {
+    flex-direction: column;
+  }
+  .dashboardContent {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

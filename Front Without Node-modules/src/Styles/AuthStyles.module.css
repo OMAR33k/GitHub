@@ -1,0 +1,278 @@
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #ffd60a;
+  --third-color: #1c3656;
+  --hover-color: #ffe28a;
+  --text-color: white;
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Container for the authentication pages */
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  margin-top: 80px;
+}
+
+/* Form container */
+.authForm {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color);
+  transition:  1s ease;
+}
+
+.authForm:hover {
+  transform: translateY(-5px);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 0 16px var(--secondary-color);
+}
+
+/* Title styling */
+.authTitle {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.authTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Form element styling */
+.form {
+  width: 100%;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  z-index: 1;
+}
+
+.inputField {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.inputField:focus {
+  border-color: var(--primary-color);
+  background: #fff;
+  box-shadow: 0 0px 16px var(--primary-color);
+  outline: none;
+}
+
+/* Submit button styling */
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  color: #000000;
+  box-shadow: 0 5px 15px rgba(255, 214, 10, 0.3);
+}
+
+/* Divider styling between form and social buttons */
+.divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Social buttons row */
+.socialButtonsRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Social button common styles */
+.socialButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  color: #fff;
+}
+
+/* Social icons styling */
+.socialIcon {
+  font-size: 1.5rem;
+}
+
+/* Specific social button colors */
+.google {
+  background: #db4437;
+}
+
+.microsoft {
+  background: #2F2F2F;
+}
+
+.apple {
+  background: #000000;
+}
+
+/* Authentication links */
+.authLinks {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--secondary-color);
+}
+
+.linkAccent {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.switchLink {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Error message styling */
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  animation: shake 0.3s ease;
+}
+/* تنسيقات النافذة المنبثقة */
+.toast-success {
+  background: #4CAF50 !important;
+  color: white !important;
+  border-radius: 8px !important;
+}
+
+/* تنسيقات زر التحميل */
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loadingSpinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .authForm {
+    padding: 2rem;
+  }
+
+  .authTitle {
+    font-size: 2rem;
+  }
+
+  .inputField {
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+  }
+}

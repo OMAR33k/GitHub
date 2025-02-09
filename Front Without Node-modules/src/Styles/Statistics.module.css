@@ -1,0 +1,49 @@
+.statisticsContainer {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.accountInfo {
+  margin-bottom: 2rem;
+}
+
+.infoCard {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coursesSection {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.courseCard {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+}
+
+.progressContainer {
+  margin-top: 1rem;
+}
