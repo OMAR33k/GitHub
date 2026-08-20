@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import styles from "../../Styles/FooterStyle.module.css";
@@ -8,7 +7,7 @@ export default function Footer() {
   return (
   <footer className={styles.footer}>
     <div className={styles.footerWavesContainer}>
-      <svg viewBox="0 0 1440 320" 
+      <svg viewBox="0 0 1440 320"
     className={styles.footerWaves}
     preserveAspectRatio="none">
   <path
@@ -21,14 +20,14 @@ export default function Footer() {
     stroke="var(--secondary-color)"
     strokeWidth="20"
   />
-  
+
 </svg>
     </div>
     <div className={styles.mainContent}>
       <div className={styles.contentGrid}>
         <div className={styles.infoColumn}>
-          <h3 className={styles.logo }>EngliGo</h3>
-          <p className={styles.companyDescription}>{t("aboutText")}</p>
+          <h3 className={styles.logo }>DevLegend</h3>
+          <p className={styles.companyDescription}>مطور Full Stack أصمم تجارب رقمية خرافية باستخدام React وVite وLaravel وASP.NET والذكاء الاصطناعي.</p>
         </div>
         <div className={styles.linksColumn}>
           <h4 className={styles.sectionTitle}>{t("quickLinks")}</h4>
@@ -57,9 +56,9 @@ export default function Footer() {
               <a href="#"><FaYoutube /></a>
               <a href="#"><FaLinkedin/></a>
             </div>
-            <ul className={styles.ulMenu} >      
-              <li 
-                style={{ "--i": -3, "--clr": "#1877f2" }} 
+            <ul className={styles.ulMenu} >
+              <li
+                style={{ "--i": -3, "--clr": "#1877f2" }}
                 data-text="Facebook"
                 className={styles.liMenu}>
                 <a href="https://www.facebook.com" className={styles.aMenu}>
@@ -67,8 +66,8 @@ export default function Footer() {
                   Facebook
                 </a>
               </li>
-              <li 
-                style={{ "--i": -2, "--clr": "#25d366" }} 
+              <li
+                style={{ "--i": -2, "--clr": "#25d366" }}
                 data-text="WhatsApp"
                 className={styles.liMenu}>
                 <a href="#" className={styles.aMenu}>
@@ -76,8 +75,8 @@ export default function Footer() {
                   WhatsApp
                 </a>
               </li>
-              <li 
-                style={{ "--i": -1, "--clr": "#1da1f2" }} 
+              <li
+                style={{ "--i": -1, "--clr": "#1da1f2" }}
                 data-text="Twitter"
                 className={styles.liMenu}>
                 <a href="#" className={styles.aMenu}>
@@ -85,8 +84,8 @@ export default function Footer() {
                   Twitter
                 </a>
               </li>
-              <li 
-                style={{ "--i": 0, "--clr": "#c32aa3" }} 
+              <li
+                style={{ "--i": 0, "--clr": "#c32aa3" }}
                 data-text="Instagram"
                 className={styles.liMenu}>
                 <a href="#" className={styles.aMenu}>
@@ -94,8 +93,8 @@ export default function Footer() {
                   Instagram
                 </a>
               </li>
-              <li 
-                style={{ "--i": 1, "--clr": "#f00" }} 
+              <li
+                style={{ "--i": 1, "--clr": "#f00" }}
                 data-text="Youtube"
                 className={styles.liMenu}>
                 <a href="#" className={styles.aMenu}>
@@ -103,8 +102,8 @@ export default function Footer() {
                   Youtube
                 </a>
               </li>
-              <li 
-                style={{ "--i": 2, "--clr": "#0a66c2" }} 
+              <li
+                style={{ "--i": 2, "--clr": "#0a66c2" }}
                 data-text="Linkedin"
                 className={styles.liMenu}>
                 <a href="#" className={`${styles.aMenu} ${styles.textMenu}`}>
@@ -118,7 +117,7 @@ export default function Footer() {
       </div>
       <div className={styles.copyright}>
         <div className={styles.copyrightContent}>
-          © 2025 <span className={styles.companyName}>EngliGo</span> - 
+          © 2025 <span className={styles.companyName}>DevLegend</span> -
           {t("rightsReserved")}
         </div>
         <div className={styles.scrollTop} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
