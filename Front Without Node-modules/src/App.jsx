@@ -44,6 +44,7 @@ export default function App() {
               </ProtectedRoute>
             }
           >
+            <Route index element={<Statistics />} />
             <Route path="profile" element={<Profile />} />
             <Route path="Statistics" element={<Statistics />} />
           </Route>
