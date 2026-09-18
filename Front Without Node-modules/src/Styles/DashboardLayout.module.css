@@ -2,12 +2,13 @@
 .dashboardLayout {
   display: flex;
   min-height: 100vh;
-  background-color: #eef2f7; /* لون الخلفية كما تريد */
+  background-color: #f7faf9;
 }
 
 .dashboardContent {
   flex: 1;
-  padding: 30px 20px;
+  min-width: 0;
+  padding: 12px 20px;
   /* في الشاشات الصغيرة يمكن تقليل البادينج إذا لزم الأمر */
 }
 
