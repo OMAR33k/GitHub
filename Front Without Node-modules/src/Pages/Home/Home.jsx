@@ -1,171 +1,182 @@
-import React from 'react';
-import { Container, Button, Row, Col, Card } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { Container, Button, Row, Col, Card, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import {
+  FaBootstrap,
+  FaBrain,
+  FaCss3Alt,
+  FaHtml5,
+  FaJs,
+  FaLaravel,
+  FaReact,
+  FaRocket,
+  FaServer,
+} from 'react-icons/fa';
+import { SiDotnet, SiVite } from 'react-icons/si';
 import styles from '../../Styles/HomeStyle.module.css';
 import AnimatedSection from '../../Assets/AnimatedSection';
-import { FaSun } from 'react-icons/fa';
+
 const scrollVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 80 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: 'easeOut' } },
 };
+
+const techStack = [
+  { name: 'React', icon: <FaReact />, tone: '#61dafb' },
+  { name: 'Vite', icon: <SiVite />, tone: '#bd34fe' },
+  { name: 'HTML5', icon: <FaHtml5 />, tone: '#ff6b35' },
+  { name: 'CSS3', icon: <FaCss3Alt />, tone: '#32a8ff' },
+  { name: 'JavaScript', icon: <FaJs />, tone: '#f7df1e' },
+  { name: 'Bootstrap', icon: <FaBootstrap />, tone: '#8b5cf6' },
+  { name: 'AI', icon: <FaBrain />, tone: '#00f5d4' },
+  { name: 'Laravel', icon: <FaLaravel />, tone: '#ff2d20' },
+  { name: 'ASP.NET', icon: <SiDotnet />, tone: '#9b5cff' },
+];
+
+const projects = [
+  {
+    title: 'منصة تعليم ذكية',
+    category: 'React + AI',
+    description: 'تجربة تعليمية تفاعلية تستخدم تحليل البيانات والذكاء الاصطناعي لتخصيص الرحلة لكل مستخدم.',
+  },
+  {
+    title: 'لوحة تحكم SaaS',
+    category: 'Laravel API',
+    description: 'واجهات إدارة سريعة مع صلاحيات، إحصائيات حية، وتجربة استخدام مصممة للأداء العالي.',
+  },
+  {
+    title: 'نظام مؤسسي متكامل',
+    category: 'ASP.NET',
+    description: 'بنية خلفية قوية وآمنة للتطبيقات الكبيرة مع تكامل قواعد البيانات وخدمات الويب.',
+  },
+];
+
+const services = [
+  'تصميم واجهات عصرية وResponsive',
+  'تطوير تطبيقات React/Vite عالية السرعة',
+  'بناء APIs باستخدام Laravel وASP.NET',
+  'دمج حلول AI في المنتجات الرقمية',
+];
 
 const Home = () => {
-  const { t } = useTranslation();
-
   return (
-    <div className={styles.mainWrapper}>
+    <main className={styles.portfolioWrapper} dir="rtl">
       <section className={styles.heroSection}>
+        <div className={styles.orbOne} />
+        <div className={styles.orbTwo} />
         <Container>
-          <AnimatedSection>
-            <Row className="align-items-center">
-              <Col md={6} className={styles.heroText}>
+          <Row className="align-items-center g-5">
+            <Col lg={7}>
+              <AnimatedSection>
                 <motion.div initial="hidden" animate="visible" variants={scrollVariants}>
-                  <h1 className={styles.textShadow}>تعلم اللغات بسهولة معنا</h1>
-                  <p className={`lead my-4 ${styles.textShadow} `}>انطلق في رحلة تعلمك مع نظام متطور يعتمد على تقنيات حديثة لتحسين مهاراتك اللغوية.</p>
-                  <motion.button 
-                    type="submit"
-                    className={` ${styles.ctaButton}`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}>
-                    {t('ابدأ التعلم الآن')}
-                  </motion.button>
+                  <Badge className={styles.heroBadge}>Portfolio 2026 • Full Stack Developer</Badge>
+                  <h1 className={styles.heroTitle}>
+                    أصمم وأبني مواقع <span>أسطورية وخرافية</span> بتقنيات المستقبل
+                  </h1>
+                  <p className={styles.heroLead}>
+                    بورتفوليو احترافي يعرض خبرتي في React + Vite وHTML وCSS وJavaScript وBootstrap،
+                    مع حلول خلفية قوية عبر Laravel وASP.NET ولمسات AI تجعل التجربة أذكى وأسرع.
+                  </p>
+                  <div className={styles.heroActions}>
+                    <Button href="#projects" className={styles.primaryButton}>شاهد الأعمال</Button>
+                    <Button href="#contact" className={styles.ghostButton}>تواصل معي</Button>
+                  </div>
                 </motion.div>
-              </Col>
-              <Col md={6} className="d-none d-md-block">
-                <motion.img
-                  src="/images/busuu-header-hello.png"
-                  alt="تعلم اللغات"
-                  className={`img-fluid rounded ${styles.heroImage}`}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1 }}
-                />
-              </Col>
-            </Row>
-          </AnimatedSection> 
+              </AnimatedSection>
+            </Col>
+            <Col lg={5}>
+              <AnimatedSection delay={0.15}>
+                <motion.div className={styles.heroCard} whileHover={{ y: -8, rotate: -1 }}>
+                  <div className={styles.codeWindowDots}><span /><span /><span /></div>
+                  <pre>{`const portfolio = {\n  role: 'Full Stack Developer',\n  frontend: ['React', 'Vite', 'Bootstrap'],\n  backend: ['Laravel', 'ASP.NET'],\n  superpower: 'AI Driven UX'\n};`}</pre>
+                </motion.div>
+              </AnimatedSection>
+            </Col>
+          </Row>
         </Container>
       </section>
-          <section className={styles.featuresSection}>
-        <div className={styles.WavesContainer}>
-      <svg viewBox="0 0 1440 320" 
-          className={styles.Waves}
-          preserveAspectRatio="none">
-        <path
-          fill="#1c3656"
-          d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,138.7C960,117,1056,107,1152,117.3C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        />
-      </svg>
-      </div>
+
+      <section className={styles.stackSection}>
         <Container>
           <AnimatedSection>
-          <motion.h2 className={`text-center mb-5 ${styles.sectionTitle}`} initial="hidden" animate="visible" variants={scrollVariants}>
-            مميزات منصتنا
-          </motion.h2>
+            <h2 className={styles.sectionTitle}>التقنيات التي أصنع بها السحر</h2>
           </AnimatedSection>
-          <Row>
-            {["🎙️ تحليل نطقك بدقة عالية", "📚 دروس تفاعلية مشوقة", "📱 تطبيق متاح على جميع الأجهزة"].map((feature, index) => (
-              <Col md={4} className="mb-4" key={index}>
-            <AnimatedSection delay={index * 0.2}>
-                <motion.div whileHover={{ scale: 1.05 }}>
-                  <Card className={styles.featureCard}>
-                    <Card.Body>
-                      <div className={styles.iconWrapper}>{feature.split(" ")[0]}</div>
-                      <Card.Title>{feature.substring(2)}</Card.Title>
-                      <Card.Text>استفد من تقنياتنا لجعل تعلمك أسرع وأسهل من أي وقت مضى.</Card.Text>
-                    </Card.Body>
-                  </Card>
+          <div className={styles.techGrid}>
+            {techStack.map((tech, index) => (
+              <AnimatedSection delay={index * 0.05} key={tech.name}>
+                <motion.div className={styles.techPill} style={{ '--tone': tech.tone }} whileHover={{ scale: 1.08 }}>
+                  <span>{tech.icon}</span>
+                  {tech.name}
                 </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.projectsSection} id="projects">
+        <Container>
+          <AnimatedSection>
+            <h2 className={styles.sectionTitle}>مشاريع مختارة</h2>
+          </AnimatedSection>
+          <Row className="g-4">
+            {projects.map((project, index) => (
+              <Col lg={4} md={6} key={project.title}>
+                <AnimatedSection delay={index * 0.12}>
+                  <motion.div whileHover={{ y: -10 }}>
+                    <Card className={styles.projectCard}>
+                      <Card.Body>
+                        <div className={styles.projectNumber}>0{index + 1}</div>
+                        <Badge className={styles.projectBadge}>{project.category}</Badge>
+                        <Card.Title>{project.title}</Card.Title>
+                        <Card.Text>{project.description}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </motion.div>
                 </AnimatedSection>
               </Col>
             ))}
           </Row>
         </Container>
       </section>
-      <section className={styles.coursesSection}>
-            <div className={styles.WavesContainerTo}>
-      <svg viewBox="0 0 1440 320" 
-          className={styles.WavesTo}
-          preserveAspectRatio="none">
-        <path
-          fill="#1c3656"
-          d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,138.7C960,117,1056,107,1152,117.3C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        />
-      </svg>
-      </div>
+
+      <section className={styles.servicesSection}>
         <Container>
-          <AnimatedSection>
-          <motion.h2 className={`text-center mb-5 ${styles.sectionTitle}`} initial="hidden" animate="visible" variants={scrollVariants}>
-            أشهر الدورات لدينا
-          </motion.h2>
-          </AnimatedSection>
-          <Row>
-            {["🇬🇧 الإنجليزية للمبتدئين", "🇫🇷 إتقان الفرنسية بسهولة", "🇪🇸 الإسبانية للمسافرين", "🇩🇪 تعلم الألمانية بسرعة"].map((course, index) => (
-              <Col lg={3} md={6} className="mb-4" key={index}>
-                <AnimatedSection delay={index * 0.2}>
-                <motion.div whileHover={{ scale: 1.03 }}>
-                  <Card className={styles.courseCard}>
-                    <Card.Img variant="top" src={`/images/course-${index +1}.jpg`} />
-                    <Card.Body>
-                      <Card.Title>{course}</Card.Title>
-                      <Card.Text>انضم إلى آلاف الطلاب الذين بدأوا تعلم هذه اللغة معنا.</Card.Text>
-                      <Button variant="primary" className="w-100">
-                        سجل الآن
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-                </AnimatedSection>
-              </Col>
-            ))}
+          <Row className="align-items-center g-4">
+            <Col lg={5}>
+              <AnimatedSection>
+                <div className={styles.servicesIntro}>
+                  <FaRocket />
+                  <h2>ماذا أقدم لك؟</h2>
+                  <p>من فكرة بسيطة إلى منتج رقمي مبهر، أركز على الجمال، السرعة، قابلية التوسع، وتجربة المستخدم.</p>
+                </div>
+              </AnimatedSection>
+            </Col>
+            <Col lg={7}>
+              <div className={styles.serviceList}>
+                {services.map((service, index) => (
+                  <AnimatedSection delay={index * 0.08} key={service}>
+                    <div className={styles.serviceItem}><FaServer /> {service}</div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>
-      <section className={styles.communitySection}>
-         <div className={styles.WavesContainer}>
-      <svg viewBox="0 0 1440 320" 
-          className={styles.Waves}
-          preserveAspectRatio="none">
-        <path
-          fill="#1c3656"
-          d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,138.7C960,117,1056,107,1152,117.3C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        />
-      </svg>
-      </div>
+
+      <section className={styles.ctaSection} id="contact">
         <Container>
           <AnimatedSection>
-            <motion.h2 className={`text-center mb-5 ${styles.sectionTitle}`} initial="hidden" animate="visible" variants={scrollVariants}>
-              انضم إلى مجتمعنا
-            </motion.h2>
-            <Row>
-              <Col md={6}>
-                <motion.img
-                  src="/images/communication.png"
-                  alt="مجتمع تعلم اللغات"
-                  className={`img-fluid rounded ${styles.communityImage}`}
-                  variants={scrollVariants}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1 }}
-                />
-              </Col>
-              <Col md={6} className={styles.communityText}>
-                <motion.div initial="hidden" animate="visible" variants={scrollVariants}>
-                  <p>انضم إلى مجتمعنا النشط حيث يمكنك التفاعل مع متعلمين آخرين، تبادل الخبرات، وممارسة اللغات مع متحدثين أصليين.</p>
-                  <motion.button 
-                    type="submit"
-                    className={` ${styles.ctaButton}`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}>
-                    {t('انضم إلينا الآن')}
-                  </motion.button>
-                </motion.div>
-              </Col>
-            </Row>
+            <div className={styles.ctaPanel}>
+              <h2>جاهز لبناء حضورك الرقمي الأسطوري؟</h2>
+              <p>دعنا نحول أفكارك إلى واجهة مذهلة وتطبيق متكامل يترك انطباعاً لا يُنسى.</p>
+              <Button href="mailto:hello@example.com" className={styles.primaryButton}>ابدأ مشروعك الآن</Button>
+            </div>
           </AnimatedSection>
         </Container>
       </section>
-    </div>
+    </main>
   );
 };
+
 export default Home;

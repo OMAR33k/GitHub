@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import styles from '../../Styles/HeaderStyle.module.css';
@@ -20,7 +20,7 @@ export default function Header() {
         const userData = JSON.parse(storedUser);
         // نفترض أن وجود التوكن يعني تسجيل الدخول
         setIsLoggedIn(userData && userData.token ? true : false);
-      } catch (error) {
+      } catch {
         setIsLoggedIn(false);
       }
     } else {
@@ -42,9 +42,9 @@ export default function Header() {
     <animated.header style={fadeIn} className={styles.fixedHeader}>
       <div className={styles.headerContainer}>
         <Link to="/" className={styles.logo}>
-          EngliGo
+          DevLegend
         </Link>
-        <button 
+        <button
           className={`btn d-lg-none ${styles.menuButton}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation">
@@ -67,7 +67,7 @@ export default function Header() {
             </li>
             <li className={`${styles.navItem} ${styles.dropdown}`}>
               <span>{t('language')}</span>
-              <ul className={styles.dropdownMenu}> 
+              <ul className={styles.dropdownMenu}>
                 <li onClick={() => changeLanguage('en')}>English</li>
                 <li onClick={() => changeLanguage('ar')}>العربية</li>
                 <li onClick={() => changeLanguage('fr')}>Français</li>
@@ -83,7 +83,7 @@ export default function Header() {
                     {t('signUp')}
                   </Link>
                 </li>
-                
+
               </>
             )}
             {/* إذا كان المستخدم مسجّل الدخول تظهر رابط الـ Dashboard */}
@@ -106,14 +106,14 @@ export default function Header() {
       </div>
       <div className={styles.wavesContainer}>
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" className={styles.waves}>
-          <path 
-            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+          <path
+            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
             fill="var(--third-color)"
           />
-          <path 
-            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98" 
-            fill="none" 
-            stroke="var(--secondary-color)" 
+          <path
+            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+            fill="none"
+            stroke="var(--secondary-color)"
             strokeWidth="10"
           />
         </svg>
